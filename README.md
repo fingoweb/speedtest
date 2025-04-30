@@ -28,13 +28,26 @@ To use this package, ensure your Laravel application meets the following require
 
 Here is how to install and configure the Laravel LibreSpeed package:
 
-### Step 1: Install the Package
+### Step 1: Add repository to Composer
+
+Before installing the package, make sure to add the following to your `composer.json` in the `repositories` section:
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:fingoweb/speedtest.git"
+    }
+]
+```
+
+### Step 2: Install the Package
 Run the following command to install the package via Composer:
 ```bash
 composer require fingoweb/speedtest
 ```
 
-### Step 2: Create Symbolic Link (Recommended Alternative to Asset Publishing)
+### Step 3: Create Symbolic Link (Recommended Alternative to Asset Publishing)
 Instead of publishing the assets, you can create a symbolic link to the package's public folder, avoiding the need to copy the files. Simply run the following Artisan command:
 ```bash
 php artisan speedtest:link
